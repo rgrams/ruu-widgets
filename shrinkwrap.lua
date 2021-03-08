@@ -1,4 +1,6 @@
 
+-- Require this module to add a "shrinkwrap" scaling mode to gui.Node.
+
 local max = math.max
 
 local function sumChildDimensions(self)
