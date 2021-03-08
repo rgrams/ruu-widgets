@@ -5,7 +5,7 @@
 -- and passes it to Ruu, and handles the menu being enabled and disabled.
 
 local Ruu = require "ruu.ruu"
-local theme = require "theme.theme"
+local theme = require "interface.theme.theme"
 
 local Class = require "philtre.modules.base-class"
 local MenuInterface = Class:extend()

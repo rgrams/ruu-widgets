@@ -1,7 +1,7 @@
 
 -- Probably only works with two greedy Row/Column children with "fill" mode.
 
-local theme = require "theme.theme"
+local theme = require "interface.theme.theme"
 
 local SplitterHandle = gui.Slice:extend()
 
