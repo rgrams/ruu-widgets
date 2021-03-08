@@ -15,11 +15,12 @@ function MenuInterface.makeRuu(self)
 end
 
 -- Make a list of widgets, focus-map them, etc.
-function MenuInterface.mapWidgets(self, ...)
+-- Needs to be called on or after init to get the menuSwitcher object.
+function MenuInterface.mapWidgets(self, widgetIndices)
 	local menuSwitcher = self.parent -- The object that has the menuSwitcher_script on it.
 	self.widgetList = {}
 	local focusMap = {}
-	for _i,childIdx in ipairs({...}) do
+	for _i,childIdx in ipairs(widgetIndices) do
 		local child = self.children[childIdx]
 		if _i == 1 then  self.focusedWgt = child  end
 		child.menuSwitcher = menuSwitcher
