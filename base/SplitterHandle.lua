@@ -44,10 +44,10 @@ end
 function SplitterHandle.init(self)
 	SplitterHandle.super.init(self)
 	if type(self.target1) == "string" then
-		self.target1 = scene:get(self.target1)
+		self.target1 = self.tree:get(self.target1)
 	end
 	if type(self.target2) == "string" then
-		self.target2 = scene:get(self.target2)
+		self.target2 = self.tree:get(self.target2)
 	end
 end
 
@@ -56,8 +56,8 @@ function SplitterHandle.set(self, x, y, angle, w, h, pivot, anchor, modeX, modeY
 	self.name = "SplitterHandle"
 	self.layer = layers and layers.panelBG or "panel backgrounds"
 	self.isDraggable = true
-	self.target1 = scene:get(target1) or target1
-	self.target2 = scene:get(target2) or target2
+	self.target1 = target1
+	self.target2 = target2
 	self.useYAxis = yAxis
 	self.minSize = math.max(1, minSize or 20)
 	self.hoverCursor = self.useYAxis and "sizens" or "sizewe"
